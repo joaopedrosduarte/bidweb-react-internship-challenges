@@ -9,7 +9,7 @@ interface InputForms {
 
 //React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export default function InputForms({placeholder, onClick, icon, className}: InputForms) {
+export default function CreateTaskButton({placeholder, onClick, icon, className}: InputForms) {
     return(
         <button className={`${className} flex w-full h-24 items-center justify-center`} onClick={onClick}>
             {icon}

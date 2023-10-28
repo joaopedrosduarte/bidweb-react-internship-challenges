@@ -10,7 +10,10 @@ export default {
         body: ["Poppins"]
       },
       colors: {
-        'basegray': "#191919",
+        'bggray': "#191919",
+        'basegray': "#262626",
+        'lightblue': "#4EA8DE",
+        'textgray': "#666666",
         'lightgray': "#333333",
         'darkblue': "#1E6F9F",
         'green': "#1BA339",
