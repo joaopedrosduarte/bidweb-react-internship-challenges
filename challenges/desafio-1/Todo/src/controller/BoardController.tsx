@@ -1,32 +1,40 @@
-import { TaskType } from "../model/TaskType";
+import { Task } from "../model/Task";
 import Column from "../view/Column";
 import { useEffect, useState } from "react";
 
 interface BoardControllerProps {
-  tasks: TaskType[];
-  onHandleChangeTaskStatus: (title:string) => void;
+  tasks: Task[];
+  onHandleChangeTaskStatus: (title: string) => void;
+  onHandleChangeTaskTitle: (title: string, lastTitle: string) => void;
+  onHandleDeleteTask: (title: string) => void;
 }
 
-export default function BoardController({ tasks, onHandleChangeTaskStatus }: BoardControllerProps) {
-  const [todoTaskArray, setTodoTaskArray] = useState<TaskType[]>([]);
-  const [doneTaskArray, setDoneTaskArray] = useState<TaskType[]>([]);
+export default function BoardController({
+  tasks,
+  onHandleChangeTaskStatus,
+  onHandleChangeTaskTitle,
+  onHandleDeleteTask,
+}: BoardControllerProps) {
+  const [todoTaskArray, setTodoTaskArray] = useState<Task[]>([]);
+  const [doneTaskArray, setDoneTaskArray] = useState<Task[]>([]);
 
   function filterTasks() {
     if (tasks.length === 0) {
       return;
     } else {
-      const newTodoTasksArray: TaskType[] = []
-      const newDoneTasksArray: TaskType[] = []
+      const newTodoTasksArray: Task[] = [];
+      const newDoneTasksArray: Task[] = [];
       tasks.map((task) => {
-        console.log(task);
-        if (task.status === "todo") {
-          newTodoTasksArray.push(task)
-        } else {
-          newDoneTasksArray.push(task)
+        if (task.title !== "template"){
+          if (task.status === "todo") {
+            newTodoTasksArray.push(task);
+          } else {
+            newDoneTasksArray.push(task);
+          }
         }
       });
-      setDoneTaskArray(newDoneTasksArray)
-      setTodoTaskArray(newTodoTasksArray)
+      setDoneTaskArray(newDoneTasksArray);
+      setTodoTaskArray(newTodoTasksArray);
     }
   }
 
@@ -41,12 +49,16 @@ export default function BoardController({ tasks, onHandleChangeTaskStatus }: Boa
         numTasks={todoTaskArray.length}
         tasks={todoTaskArray}
         onHandleChangeTaskStatus={onHandleChangeTaskStatus}
+        onHandleChangeTaskTitle={onHandleChangeTaskTitle}
+        onHandleDeleteTask={onHandleDeleteTask}
       />
       <Column
         title="Done"
         numTasks={doneTaskArray.length}
         tasks={doneTaskArray}
         onHandleChangeTaskStatus={onHandleChangeTaskStatus}
+        onHandleChangeTaskTitle={onHandleChangeTaskTitle}
+        onHandleDeleteTask={onHandleDeleteTask}
       />
     </div>
   );
