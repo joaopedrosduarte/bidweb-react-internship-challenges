@@ -18,7 +18,7 @@ export default function CreateTaskButton({ placeholder, icon, className, onHandl
         onClick={() => setIsModalOpen(true)}
       >
         {icon}
-        <span className="font-medium text-base">{placeholder}</span>
+        <span className="font-medium text-3xl">{placeholder}</span>
       </button>
         {isModalOpen ? (
           <CreateTaskModal setIsModalOpen={setIsModalOpen} onHandleCreateTask={onHandleCreateTask} />

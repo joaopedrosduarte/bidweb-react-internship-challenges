@@ -1,22 +1,23 @@
-import { useCallback, useEffect, useState } from "react";
 import CreateTaskButton from "../view/CreateTaskButton";
-import { Task } from "../model/Task";
 import BoardController from "./BoardController";
+import SearchButton from "../view/SearchButton";
+import { Task } from "../model/Task";
+import { useState } from "react";
 
 export default function Main() {
-  const [tasks, setTasks] = useState<Task[]>([{id:"template",title:"template", status:"todo", createdAt: new Date()}]);
-  const [, updateState] = useState<unknown>()
-  const forceUpdate = useCallback(() => updateState({}), []);
+  const [tasks, setTasks] = useState<Task[]>(() => {
 
-  useEffect(() => {
-    forceUpdate();
-  }, [tasks, forceUpdate]);
+    const todo = localStorage.getItem("t");
+
+    return todo !== null ? JSON.parse(todo) : []
+  });
 
   function handleCreateTask(title: string) {
     setTasks((prevTask) => [
       { id: title, title, createdAt: new Date(), status: "todo" },
       ...prevTask,
     ]);
+    localStorage.setItem("t", JSON.stringify([...tasks, { id: title, title, createdAt: new Date(), status: "todo" }]))
   }
 
   function handleChangeTaskStatus(title: string) {
@@ -32,7 +33,7 @@ export default function Main() {
       }
       return task;
     });
-
+    localStorage.setItem("t", JSON.stringify(newTasksArray))
     setTasks(newTasksArray);
   }
 
@@ -45,7 +46,7 @@ export default function Main() {
       }
       return task;
     });
-
+    localStorage.setItem("t", JSON.stringify(newTasksArray))
     setTasks(newTasksArray);
   }
 
@@ -53,9 +54,8 @@ export default function Main() {
     const newTasksArray = tasks.filter((task) => {
       return task.title !== title;
     });
-
+    localStorage.setItem("t", JSON.stringify(newTasksArray))
     setTasks(newTasksArray);
-    forceUpdate();
   }
 
   return (

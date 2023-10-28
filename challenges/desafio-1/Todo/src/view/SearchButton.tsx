@@ -9,11 +9,11 @@ interface InputForms {
 
 //React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export default function CreateTaskButton({placeholder, onClick, icon, className}: InputForms) {
+export default function SearchButton({placeholder, onClick, icon, className}: InputForms) {
     return(
         <button className={`${className} flex w-full h-24 items-center justify-center`} onClick={onClick}>
             {icon}
-            <span className="font-medium text-base">
+            <span className="font-medium text-3xl">
                 {placeholder}
             </span>
         </button>

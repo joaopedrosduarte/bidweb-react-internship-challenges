@@ -34,7 +34,7 @@ export default function CreateTaskModal({ setIsModalOpen, onHandleCreateTask }: 
             <div className="flex items-start justify-between p-5 border-b border-solid border-0 border-lightgray rounded-t">
               <h3 className="text-3xl font-semibold">Nova task</h3>
               <button
-                className="text-red-500 background-transparent font-bold uppercase px-6 py-2 border border-red-500 rounded-lg text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
+                className="text-red-500 text-base background-transparent font-medium uppercase px-6 py-2 border border-red-500 rounded-lg outline-none focus:outline-none ease-linear transition-all duration-150"
                 onClick={() => setIsModalOpen(false)}
               >
                 Fechar
