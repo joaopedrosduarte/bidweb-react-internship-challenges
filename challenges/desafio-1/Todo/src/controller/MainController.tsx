@@ -1,6 +1,5 @@
 import CreateTaskButton from "../view/CreateTaskButton";
 import BoardController from "./BoardController";
-import SearchButton from "../view/SearchButton";
 import { Task } from "../model/Task";
 import { useState } from "react";
 
@@ -39,7 +38,6 @@ export default function Main() {
 
   function handleChangeTaskTitle(title: string, lastTitle: string) {
     const newTasksArray = tasks.map((task) => {
-      console.log(task.title)
       if (task.title == lastTitle) {
         task.title = title;
         task.id = title;

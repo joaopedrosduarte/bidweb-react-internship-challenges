@@ -50,10 +50,10 @@ export default function BoardController({
       <div className="flex justify-between">
         <span>Tipo de view</span>
         <div className="flex">
-          <button className={`rounded-full rounded-r-none font-light bg-lightblue px-4 ${isDefault ? "" : "border border-lightblue text-lightblue"}`} onClick={() => setIsDefault(true)}>
+          <button className={`rounded-full rounded-r-none border-r-[0.5px] font-light border border-lightblue transition-all px-4 ${isDefault ? "bg-lightblue" : "text-lightblue bg-basegray"}`} onClick={() => setIsDefault(true)}>
             Padrão
           </button>
-          <button className="rounded-full rounded-l-none font-light bg-[#8284FA] px-4" onClick={() => setIsDefault(false)}>
+          <button className={`rounded-full rounded-l-none border-l-[0.5px] font-light border border-[#8284FA] transition-all px-4 ${isDefault ? "text-[#8284FA] bg-basegray" : "bg-[#8284FA]"}`} onClick={() => setIsDefault(false)}>
             Junta
           </button>
         </div>
@@ -80,8 +80,8 @@ export default function BoardController({
         </> : 
         <Column
           title="Tasks"
-          numTasks={todoTaskArray.length}
-          tasks={todoTaskArray}
+          numTasks={tasks.length}
+          tasks={tasks}
           onHandleChangeTaskStatus={onHandleChangeTaskStatus}
           onHandleChangeTaskTitle={onHandleChangeTaskTitle}
           onHandleDeleteTask={onHandleDeleteTask}
