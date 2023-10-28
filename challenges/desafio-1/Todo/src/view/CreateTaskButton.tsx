@@ -1,16 +1,14 @@
 import { ReactElement, useState } from "react";
-import ModalCreateTask from "./ModalCreateTask";
+import CreateTaskModal from "./CreateTaskModal";
 
 interface InputForms {
   placeholder: string;
-  HandleCreateTask: (title:string) => void;
+  onHandleCreateTask: (title:string) => void;
   icon?: ReactElement;
   className: string;
 }
 
-//React.ButtonHTMLAttributes<HTMLButtonElement>;
-
-export default function CreateTaskButton({ placeholder, icon, className, HandleCreateTask }: InputForms) {
+export default function CreateTaskButton({ placeholder, icon, className, onHandleCreateTask }: InputForms) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -23,7 +21,7 @@ export default function CreateTaskButton({ placeholder, icon, className, HandleC
         <span className="font-medium text-base">{placeholder}</span>
       </button>
         {isModalOpen ? (
-          <ModalCreateTask setIsModalOpen={setIsModalOpen} HandleCreateTask={HandleCreateTask} />
+          <CreateTaskModal setIsModalOpen={setIsModalOpen} onHandleCreateTask={onHandleCreateTask} />
         ) : null}
     </>
   );

@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 
 interface BoardControllerProps {
   tasks: TaskType[];
+  onHandleChangeTaskStatus: (title:string) => void;
 }
 
-export default function BoardController({ tasks }: BoardControllerProps) {
+export default function BoardController({ tasks, onHandleChangeTaskStatus }: BoardControllerProps) {
   const [todoTaskArray, setTodoTaskArray] = useState<TaskType[]>([]);
   const [doneTaskArray, setDoneTaskArray] = useState<TaskType[]>([]);
 
@@ -39,11 +40,13 @@ export default function BoardController({ tasks }: BoardControllerProps) {
         title="Todo"
         numTasks={todoTaskArray.length}
         tasks={todoTaskArray}
+        onHandleChangeTaskStatus={onHandleChangeTaskStatus}
       />
       <Column
         title="Done"
         numTasks={doneTaskArray.length}
         tasks={doneTaskArray}
+        onHandleChangeTaskStatus={onHandleChangeTaskStatus}
       />
     </div>
   );

@@ -1,14 +1,11 @@
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
 
-interface ModalCreateTaskProps {
+interface CreateTaskModalProps {
   setIsModalOpen: (option: boolean) => void;
-  HandleCreateTask: (title: string) => void;
+  onHandleCreateTask: (title: string) => void;
 }
 
-export default function ModalCreateTask({
-  setIsModalOpen,
-  HandleCreateTask,
-}: ModalCreateTaskProps) {
+export default function CreateTaskModal({setIsModalOpen, onHandleCreateTask}: CreateTaskModalProps) {
   const [taskName, setTaskName] = useState("");
 
   function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -22,8 +19,9 @@ export default function ModalCreateTask({
 
   function handleNewTask(event: FormEvent) {
     event.preventDefault();
-    HandleCreateTask(taskName);
+    onHandleCreateTask(taskName);
     setTaskName("");
+    setIsModalOpen(false);
   }
 
   return (
