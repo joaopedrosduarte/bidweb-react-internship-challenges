@@ -50,12 +50,12 @@ export default function TaskComponent({
           </h1>
           <div className="flex gap-4">
             <h2 className="text-xs text-textgray">
-              Created: {createdDayAndMonth}
+              Criado em: {createdDayAndMonth}
             </h2>
             {task.status === "done"
               ? task.doneAt && (
                   <h2 className="text-xs text-textgray">
-                    Done at: {DoneDayAndMonth}
+                    Finalizado em: {DoneDayAndMonth}
                   </h2>
                 )
               : null}
@@ -67,13 +67,13 @@ export default function TaskComponent({
           <div
             className={`w-full ${
               task.status === "done" ? "bg-red-500" : "bg-lightblue"
-            } border border-b-0 border-l-0 border-r-[0.5px] border-lightgray rounded-bl-md flex justify-center`}
+            } rounded-bl-md flex justify-center py-2`}
             onClick={handleChangeTaskStatus}
           >
             {task.status === "done" ? "Uncheck" : "Check"}
           </div>
           <div
-            className="w-full bg-[#8284FA] border border-b-0 border-r-0 border-l-[0.5px] border-lightgray rounded-br-md flex justify-center"
+            className="w-full bg-[#8284FA] rounded-br-md flex justify-center py-2"
             onClick={() => setIsChanging(true)}
           >
             Editar

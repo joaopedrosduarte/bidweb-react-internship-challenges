@@ -82,6 +82,7 @@ export default function BoardController({
           title="Tasks"
           numTasks={tasks.length}
           tasks={tasks}
+          className="text-[#8284FA]"
           onHandleChangeTaskStatus={onHandleChangeTaskStatus}
           onHandleChangeTaskTitle={onHandleChangeTaskTitle}
           onHandleDeleteTask={onHandleDeleteTask}
