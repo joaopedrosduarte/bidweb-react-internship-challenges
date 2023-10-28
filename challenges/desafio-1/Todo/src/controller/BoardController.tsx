@@ -46,7 +46,7 @@ export default function BoardController({
   }, [tasks]);
 
   return (
-    <div className="flex flex-col w-full gap-10">
+    <div className="flex flex-col w-full gap-8">
       <div className="flex justify-between">
         <span>Tipo de view</span>
         <div className="flex">
