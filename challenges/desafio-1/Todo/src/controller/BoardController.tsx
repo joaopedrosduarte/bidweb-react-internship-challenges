@@ -28,7 +28,7 @@ export default function BoardController({
       const newTodoTasksArray: Task[] = [];
       const newDoneTasksArray: Task[] = [];
       tasks.map((task) => {
-        if (task.title !== "template") {
+        if (task !== null) {
           if (task.status === "todo") {
             newTodoTasksArray.push(task);
           } else {

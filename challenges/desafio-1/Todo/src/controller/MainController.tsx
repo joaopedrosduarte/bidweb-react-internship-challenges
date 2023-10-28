@@ -5,10 +5,8 @@ import { useState } from "react";
 
 export default function Main() {
   const [tasks, setTasks] = useState<Task[]>(() => {
-
-    const todo = localStorage.getItem("t");
-
-    return todo !== null ? JSON.parse(todo) : []
+    const newTasks = localStorage.getItem("t");
+    return newTasks !== null ? JSON.parse(newTasks) : []
   });
 
   function handleCreateTask(title: string) {
