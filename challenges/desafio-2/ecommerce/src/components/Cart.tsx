@@ -1,14 +1,14 @@
 import { ShoppingCartSimple, X } from "phosphor-react";
 import { Drawer, Space } from "antd";
 import { useState } from "react";
-import ProductCart from './ProductsCart';
+import ProductCart from './ProductInCart';
 
 export default function Cart() {
     const [isCartOpen, setIsCartOpen] = useState(false);
 
     return(
         <div className={`static rg:hidden cursor-pointer`}>
-            <Space onClick={() => setIsCartOpen(true)}>
+            <Space onClick={() => setIsCartOpen(true)} className="cursor-pointer border-gray border border-darkgray rounded p-1 flex justify-end h-max items-center" >
                 <ShoppingCartSimple size={24} color="rgb(255, 255, 255)" weight="bold" />
             </Space>
             <Drawer
@@ -17,7 +17,7 @@ export default function Cart() {
                 onClose={() => setIsCartOpen(false)}
                 open={isCartOpen}
                 key={'right'}
-                styles={{header: {height: "0px"}, body: {backgroundColor: '#1A1A1A', padding: '0px'}}}
+                styles={{header: {height: "0px"}, body: {backgroundColor: '#0B0B0B', padding: '0px'}}}
                 className='text-gray-200'
             >
                 <div className='flex flex-col flex-1'>

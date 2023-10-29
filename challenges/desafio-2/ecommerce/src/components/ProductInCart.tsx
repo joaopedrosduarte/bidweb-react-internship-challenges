@@ -9,7 +9,7 @@ interface ProductCartProps {
     altImage: string
 }
 
-export default function ProductCart({title, price, image, altImage}:ProductCartProps) {
+export default function ProductInCart({title, price, image, altImage}:ProductCartProps) {
     const [qtdProd, setQtdProd] = useState(1)
 
     const onChange = (value: number | null) => {
@@ -23,7 +23,7 @@ export default function ProductCart({title, price, image, altImage}:ProductCartP
         <div className='flex flex-1 p-4 w-full justify-between items-center'>
             <div className="flex gap-4">
                 <div className="flex h-full w-20 bg-darkgray rounded-xl justify-center align-middle">
-                    <img className="flex w-20 h-20 p-4" src={image} alt={altImage} />
+                    <img className="flex w-20 h-20 p-4" src={"#"} alt={altImage} />
                 </div>
                 <div className="flex flex-col gap-1">
                     <div>
@@ -36,7 +36,7 @@ export default function ProductCart({title, price, image, altImage}:ProductCartP
                     </div>
                     <div>
                         {/** tailwind just having conflict with the ant design lib but its okei i think */}
-                        <InputNumber className="bg" min={1} className='border-darkgray' defaultValue={qtdProd} onChange={onChange}  />
+                        <InputNumber className="bg" min={1} value={1} className='border-darkgray' defaultValue={qtdProd} onChange={onChange}  />
                     </div>
                 </div>
             </div>
