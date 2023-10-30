@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Category from './Category'
 import promoImage from '/banner2.png'
+import promoImage2 from '/banner-mouses.png'
 import { Product } from '../types/Product';
 import Search from './Search';
 
@@ -59,7 +60,7 @@ export default function Main() {
             <img src={promoImage} alt="imagem de promo" />
             <Search setSortType={setSortType} search={search} setSearch={setSearch} products={filteredData} title='Todos os produtos' sortType={sortType} />
             <div className='w-full overflow-hidden rounded-lg gap-4 flex flex-col'>
-                <img src={promoImage} alt="imagem de promo" />
+                <img src={promoImage2} alt="imagem de promo" />
                 <Category title='Mouses' products={mouses} />
                 <Category title='Headphone' products={headphone} />
                 <Category title='Keyboard' products={keyboard} />
