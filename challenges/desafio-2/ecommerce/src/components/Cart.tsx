@@ -2,9 +2,11 @@ import { ShoppingCartSimple, X } from "phosphor-react";
 import { Drawer, Space } from "antd";
 import { useState } from "react";
 import ProductCart from './ProductInCart';
+import useShopCart from "../hooks/useShopCart";
 
 export default function Cart() {
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const {products} = useShopCart()
 
     return(
         <div className={`static rg:hidden cursor-pointer`}>
@@ -27,7 +29,13 @@ export default function Cart() {
                             <X size={24} color="rgb(255, 255, 255)" weight="bold" />
                         </button>
                     </div>
-                    <ProductCart title="Mouse gamer" altImage="#" image="#" price="199.99" key='oi' />
+                    {
+                        products.map((product) => {
+                            return(
+                                <ProductCart id={product.id} title={product.name} altImage={product.name} image={product.img_url} price={product.price} key={product.id} />
+                            )
+                        })
+                    }
                 </div>
             </Drawer>
         </div>

@@ -2,9 +2,9 @@ import { Rate } from "antd"
 import { useNavigate } from "react-router-dom"
 
 interface ProductProps {
-    id: string
+    id: number
     title: string
-    price: string
+    price: number
     rate: number
     img?: string
 }

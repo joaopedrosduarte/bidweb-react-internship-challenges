@@ -1,21 +1,16 @@
-import { InputNumber } from "antd"
 import { Trash } from "phosphor-react"
-import { useState } from "react"
+import useShopCart from "../hooks/useShopCart"
 
 interface ProductCartProps {
+    id: number
     title: string
-    price: string
+    price: number
     image: string
     altImage: string
 }
 
-export default function ProductInCart({title, price, image, altImage}:ProductCartProps) {
-    const [qtdProd, setQtdProd] = useState(1)
-
-    const onChange = (value: number | null) => {
-        //FIXME: mybe this | null will be a error in the future 
-        setQtdProd(value!);
-    };
+export default function ProductInCart({id,title, price, altImage}:ProductCartProps) {
+    const {remove} = useShopCart()
 
     return (
         <div className='flex flex-1 p-4 w-full justify-between items-center'>
@@ -32,13 +27,9 @@ export default function ProductInCart({title, price, image, altImage}:ProductCar
                             R$ {price}
                         </span>
                     </div>
-                    <div>
-                        {/** tailwind just having conflict with the ant design lib but its okei i think */}
-                        <InputNumber className="bg" min={1} value={1} className='border-darkgray' defaultValue={qtdProd} onChange={onChange}  />
-                    </div>
                 </div>
             </div>
-            <div className="cursor-pointer border-gray border border-darkgray rounded p-1 flex justify-end h-max items-center">
+            <div className="cursor-pointer border-gray border border-darkgray rounded p-1 flex justify-end h-max items-center" onClick={() => remove(id)}>
                 <Trash size={24} color="#FFF" />
             </div>
         </div>

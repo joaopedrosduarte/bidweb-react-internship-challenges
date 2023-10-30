@@ -1,27 +1,135 @@
 {
     "products": [
         {
-            "id": 13,
-            "name": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
-            "price": "299.99",
+            "id": 1,
+            "name": "Logitech Wireless Gaming Mouse",
+            "price": 129.99,
+            "type": "Mouse",
+            "img_url": "/public/*.png",
+            "rating": 4.0,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "id": 2,
+            "name": "Razer Huntsman Elite Gaming Keyboard",
+            "price": 199.99,
+            "type": "Keyboard",
+            "img_url": "/public/*.png",
+            "rating": 3.5,
+            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id": 3,
+            "name": "Bose QuietComfort Earbuds",
+            "price": 279.99,
             "type": "Headphone",
             "img_url": "/public/*.png",
             "rating": 4.5,
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+        },
+        {
+            "id": 4,
+            "name": "Corsair K70 RGB MK.2 Mechanical Gaming Keyboard",
+            "price": 159.99,
+            "type": "Keyboard",
+            "img_url": "/public/*.png",
+            "rating": 3.0,
+            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+        },
+        {
+            "id": 5,
+            "name": "HyperX Cloud II Wireless Gaming Headset",
+            "price": 149.99,
+            "type": "Headphone",
+            "img_url": "/public/*.png",
+            "rating": 5.0,
+            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+            "id": 6,
+            "name": "Logitech G502 HERO Gaming Mouse",
+            "price": 79.99,
+            "type": "Mouse",
+            "img_url": "/public/*.png",
+            "rating": 4.0,
+            "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni."
+        },
+        {
+            "id": 7,
+            "name": "SteelSeries Arctis Pro Wireless Gaming Headset",
+            "price": 349.99,
+            "type": "Headphone",
+            "img_url": "/public/*.png",
+            "rating": 4.6,
+            "description": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+            "id": 8,
+            "name": "Logitech MX Master 3 Wireless Mouse",
+            "price": 99.99,
+            "type": "Mouse",
+            "img_url": "/public/*.png",
+            "rating": 4.7,
+            "description": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        },
+        {
+            "id": 9,
+            "name": "Corsair K95 RGB Platinum XT Mechanical Gaming Keyboard",
+            "price": 199.99,
+            "type": "Keyboard",
+            "img_url": "/public/*.png",
+            "rating": 4.4,
+            "description": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae."
+        },
+        {
+            "id": 10,
+            "name": "Sony WH-1000XM3 Wireless Noise-Canceling Headphones",
+            "price": 249.99,
+            "type": "Headphone",
+            "img_url": "/public/*.png",
+            "rating": 4.8,
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+        },
+        {
+            "id": 11,
+            "name": "Logitech G Pro Wireless Gaming Mouse",
+            "price": 149.99,
+            "type": "Mouse",
+            "img_url": "/public/*.png",
+            "rating": 4.9,
+            "description": "Corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa."
+        },
+        {
+            "id": 12,
+            "name": "Ducky One 2 Mini Mechanical Gaming Keyboard",
+            "price": 119.99,
+            "type": "Keyboard",
+            "img_url": "/public/*.png",
+            "rating": 4.7,
+            "description": "Officia deserunt mollitia animi, id est laborum et dolorum fuga."
+        },
+        {
+            "id": 13,
+            "name": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+            "price": 299.99,
+            "type": "Headphone",
+            "img_url": "/public/*.png",
+            "rating": 4.9,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
             "id": 14,
             "name": "Logitech G Pro X Superlight Wireless Gaming Mouse",
-            "price": "149.99",
+            "price": 149.99,
             "type": "Mouse",
             "img_url": "/public/*.png",
-            "rating": 4.5,
+            "rating": 4.7,
             "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
             "id": 15,
             "name": "Razer BlackWidow Elite Mechanical Gaming Keyboard",
-            "price": "169.99",
+            "price": 169.99,
             "type": "Keyboard",
             "img_url": "/public/*.png",
             "rating": 4.5,
@@ -30,25 +138,25 @@
         {
             "id": 16,
             "name": "Bose Noise Cancelling Headphones 700",
-            "price": "349.99",
+            "price": 349.99,
             "type": "Headphone",
             "img_url": "/public/*.png",
-            "rating": 4.5,
+            "rating": 4.6,
             "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
         },
         {
             "id": 17,
             "name": "Logitech G Pro Wireless Gaming Mouse",
-            "price": "129.99",
+            "price": 129.99,
             "type": "Mouse",
             "img_url": "/public/*.png",
-            "rating": 4.5,
+            "rating": 4.8,
             "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         {
             "id": 18,
             "name": "HyperX Alloy FPS Pro Mechanical Gaming Keyboard",
-            "price": "79.99",
+            "price": 79.99,
             "type": "Keyboard",
             "img_url": "/public/*.png",
             "rating": 4.0,
@@ -57,34 +165,34 @@
         {
             "id": 19,
             "name": "Beats Solo Pro Wireless Noise Cancelling On-Ear Headphones",
-            "price": "249.99",
+            "price": 249.99,
             "type": "Headphone",
             "img_url": "/public/*.png",
-            "rating": 4.0,
+            "rating": 4.3,
             "description": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
         },
         {
             "id": 20,
             "name": "Corsair Dark Core RGB/SE Wired/Wireless Gaming Mouse",
-            "price": "89.99",
+            "price": 89.99,
             "type": "Mouse",
             "img_url": "/public/*.png",
-            "rating": 4.0,
+            "rating": 4.1,
             "description": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
         },
         {
             "id": 21,
             "name": "Roccat Vulcan 121 AIMO Mechanical Gaming Keyboard",
-            "price": "139.99",
+            "price": 139.99,
             "type": "Keyboard",
             "img_url": "/public/*.png",
-            "rating": 4.0,
+            "rating": 4.4,
             "description": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae."
         },
         {
             "id": 22,
             "name": "Sony WH-CH710N Wireless Noise-Canceling Headphones",
-            "price": "129.99",
+            "price": 129.99,
             "type": "Headphone",
             "img_url": "/public/*.png",
             "rating": 4.0,
@@ -93,19 +201,19 @@
         {
             "id": 23,
             "name": "Logitech G203 Prodigy Gaming Mouse",
-            "price": "29.99",
+            "price": 29.99,
             "type": "Mouse",
             "img_url": "/public/*.png",
-            "rating": 4.5,
+            "rating": 4.2,
             "description": "Corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa."
         },
         {
             "id": 24,
             "name": "SteelSeries Apex Pro Mechanical Gaming Keyboard",
-            "price": "199.99",
+            "price": 199.99,
             "type": "Keyboard",
             "img_url": "/public/*.png",
-            "rating": 4.5,
+            "rating": 4.9,
             "description": "Officia deserunt mollitia animi, id est laborum et dolorum fuga."
         }
     ]

@@ -1,4 +1,4 @@
-import { Product } from "../util/Product"
+import { Product } from "../types/Product"
 import ProductButton from "./ProductButton"
 
 interface CategoryProps {
@@ -7,7 +7,6 @@ interface CategoryProps {
 }
 
 export default function Category({ title, products }: CategoryProps) {
-    console.log(products)
 
     return(
         <div className="flex flex-col gap-6">
@@ -15,10 +14,10 @@ export default function Category({ title, products }: CategoryProps) {
                 {title}
             </h1>
             <div className="flex overflow-x-scroll pb-6">
-                <div className="flex flex-nowrap gap-4">
+                <div className="flex rg:m-auto flex-nowrap gap-4">
                     {
                         products.map(product => {
-                            return <ProductButton id={product.id} title={product.name} price={product.price} img="#" rate={product.rating}/>
+                            return <ProductButton key={product.id} id={product.id} title={product.name} price={product.price} img="#" rate={product.rating}/>
                         })
                     }
                 </div>

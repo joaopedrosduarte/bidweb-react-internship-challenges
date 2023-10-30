@@ -1,9 +1,9 @@
 export type Product = {
-    id: string
+    id: number
     name: string
-    price: string
+    price: number
     type: "Mouse" | "Keyboard" | "Headphone"
     description: string
-    img_url: "string"
+    img_url: string
     rating: number
 }
