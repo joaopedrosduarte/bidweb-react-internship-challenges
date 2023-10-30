@@ -14,9 +14,7 @@ export default function ProductInCart({title, price, image, altImage}:ProductCar
 
     const onChange = (value: number | null) => {
         //FIXME: mybe this | null will be a error in the future 
-        console.log(value)
         setQtdProd(value!);
-        console.log(qtdProd)
     };
 
     return (
